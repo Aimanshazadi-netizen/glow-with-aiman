@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Glow With Aiman | Beauty Tips & Skincare</title>
 
 <meta name="description" content="Glow With Aiman shares beauty tips, skincare routines, haircare ideas, and fashion advice for girls.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-    <style>
+
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     background-color:#ffeef2;
@@ -20,120 +25,13 @@ body{
     margin:0;
     padding-top:80px;
 }
-<nav>
-    <a href="">Home</a>
-    <a href="">About</a>
-    <a href="">Tips</a>
-    <a href="">Contact</a>
-</nav>
-<nav>
 
-<a href="#">Home</a>
-
-<a href="#about">About</a>
-
-<a href="#">Tips</a>
-
-<a href="#contact">Contact</a>
-
-</nav>
-
-h1{
-    color:#d63384;
-    font-size:70px;
-    margin-top:50px;
-}
-
-p{
-    font-size:22px;
-    color:#444;
-}
-
-button{
-    background-color:#d63384;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    font-size:20px;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-button:hover{
-    background-color:black;
-    transform:scale(1.05);
-    transition:0.3s;
-}
-
-img{
-    margin-top:30px;
-    border-radius:20px;
-}
-
-.card{
-    background-color:white;
-    width:300px;
-    margin:40px auto;
-    padding:30px;
-    border-radius:20px;
-}
-
-.about{
-    background-color:white;
-    width:70%;
-    margin:40px auto;
-    padding:30px;
-    border-radius:20px;
-}
-.card:hover{
-    transform:scale(1.05);
-    transition:0.3s;
-}
-
-.about h2{
-    color:#d63384;
-    font-size:40px;
-}
-
-.contact{
-    background-color:white;
-    width:70%;
-    margin:40px auto;
-    padding:40px;
-    border-radius:20px;
-}
-
-.contact h2{
-    color:#d63384;
-    font-size:40px;
-}
-
-input, textarea{
-    width:80%;
-    padding:15px;
-    border-radius:10px;
-    border:1px solid #ccc;
-    font-size:18px;
-}
-
-textarea{
-    height:120px;
-}
-
-footer{
-    background-color:#d63384;
-    color:white;
-    padding:20px;
-    margin-top:40px;
-}
-
-footer p{
-    color:white;
-    font-size:18px;
-}
 nav{
     background-color:#d63384;
     padding:20px;
+    position:fixed;
+    width:100%;
+    top:0;
 }
 
 nav a{
@@ -147,117 +45,142 @@ nav a{
 nav a:hover{
     color:black;
 }
-html{
-    scroll-behavior:smooth;
+
+h1{
+    color:#d63384;
+    font-size:60px;
 }
+
+p{
+    font-size:20px;
+    color:#444;
+}
+
+button{
+    background-color:#d63384;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background-color:black;
+    transform:scale(1.05);
+}
+
+img{
+    margin-top:30px;
+    border-radius:20px;
+}
+
+.about,
+.contact{
+    background:white;
+    width:70%;
+    margin:40px auto;
+    padding:30px;
+    border-radius:20px;
+}
+
+.about h2,
+.contact h2{
+    color:#d63384;
+    font-size:40px;
+}
+
+.tips-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.tips-box{
+    background:white;
+    width:250px;
+    padding:30px;
+    border-radius:20px;
+    border:2px solid #ff4fa0;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.tips-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+a{
+    text-decoration:none;
+}
+
+.contact input,
+.contact textarea{
+    width:80%;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+.contact textarea{
+    height:120px;
+}
+
+footer{
+    background-color:#d63384;
+    color:white;
+    padding:20px;
+    margin-top:40px;
+}
+
+footer a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:black;
+}
+
 @media(max-width:768px){
 
     h1{
-        font-size:45px;
+        font-size:40px;
     }
 
-    p{
-        font-size:18px;
-        padding:10px;
-    }
-
-    img{
-        width:90%;
-    }
-@media(max-width:768px){
-
-    h1{
-        font-size:45px;
+    nav a{
+        display:block;
+        margin:10px;
     }
 
     .about,
     .contact,
-    .card{
+    .tips-box{
         width:90%;
     }
 
     img{
         width:90%;
-    }
-
-    nav a{
-        display:block;
-        margin:10px;
+        height:auto;
     }
 
 }
-    .about,
-    .contact{
-        width:90%;
-        padding:20px;
-    }
 
-    .card{
-        width:80%;
-    }
-
-    input,
-    textarea{
-        width:90%;
-    }
-
-    nav a{
-        display:block;
-        margin:10px;
-    }
-
-}
-footer{
-    background-color:#d63384;
-    color:white;
-    padding:20px;
-    margin-top:40px;
-}
-
-footer p{
-    color:white;
-    font-size:18px;
-}
-footer{
-    background-color:#d63384;
-    color:white;
-    padding:20px;
-    margin-top:40px;
-}
-
-footer p{
-    color:white;
-    font-size:18px;
-}
-nav{
-    background-color:#d63384;
-    padding:20px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:20px;
-}
-nav{
-    background-color:#d63384;
-    padding:20px;
-}
-
-nav{
-    background-color:#d63384;
-    padding:20px;
-    position:fixed;
-    width:100%;
-    top:0;
-}
 </style>
 
 </head>
 
 <body>
-    <nav>
+
+<nav>
 
 <a href="#">Home</a>
 
@@ -269,14 +192,16 @@ nav{
 
 </nav>
 
-    <h1>Glow With Aiman</h1>
+<h1>Glow With Aiman</h1>
 
-    <p>Beauty Tips For Healthy & Glowing Skin</p>
+<p>Beauty Tips For Healthy & Glowing Skin</p>
 
-    <button>Read Beauty Tips</button>
-    <br><br>
+<button>Read Beauty Tips</button>
+
+<br><br>
 
 <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500" width="300">
+
 <div class="about" id="about">
 
 <h2>About Me</h2>
@@ -287,9 +212,11 @@ Hi, I'm Aiman. I share beauty, skincare, haircare, and fashion tips to help girl
 
 </div>
 
-<div class="id="tips">
+<div class="tips-container" id="tips">
 
-<div class="card">
+<a href="skincare.html">
+
+<div class="tips-box">
 
 <h2>Skin Care Tips</h2>
 
@@ -297,13 +224,8 @@ Hi, I'm Aiman. I share beauty, skincare, haircare, and fashion tips to help girl
 
 </div>
 
-<div class="card">
+</a>
 
-<a href="haircare.html">
-
-<p>Easy routines for shiny healthy hair.</p>
-
-</div>
 <a href="haircare.html">
 
 <div class="tips-box">
@@ -315,32 +237,20 @@ Hi, I'm Aiman. I share beauty, skincare, haircare, and fashion tips to help girl
 </div>
 
 </a>
-<div class="card">
-
-<h2>Best Skincare Routine for Glowing Skin</h2>
-
-<p>
-Discover easy skincare tips for naturally glowing and healthy skin at home.
-</p>
-
-<a href="skincare.html">
-
-<button>Read More</button>
-
-</a>
 
 </div>
+
 <div class="contact" id="contact">
 
 <h2>Contact Me</h2>
 
 <input type="text" placeholder="Your Name">
 
-<br><br>
+<br>
 
 <input type="email" placeholder="Your Email">
 
-<br><br>
+<br>
 
 <textarea placeholder="Your Message"></textarea>
 
@@ -349,18 +259,19 @@ Discover easy skincare tips for naturally glowing and healthy skin at home.
 <button>Send Message</button>
 
 </div>
+
 <footer>
 
 <p>© 2026 Glow With Aiman | All Rights Reserved</p>
 
 <a href="https://instagram.com/EzaDora0">Instagram</a>
 
-<a href="https://facebook.com/https://web.facebook.com/EzaDora0">Facebook</a>
+<a href="https://facebook.com/EzaDora0">Facebook</a>
 
-<a href="https://linkedin.com/in/www.linkedin.com/in/aiman-shazadi-seo">LinkedIn</a>
+<a href="https://linkedin.com">LinkedIn</a>
 
 </footer>
 
-</div>
 </body>
+
 </html>
