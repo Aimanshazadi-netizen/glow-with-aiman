@@ -20,11 +20,19 @@ html{
 
 body{
     background:linear-gradient(to bottom,#ffeef2,#ffd6e7);
-    background-color:#ffeef2;
+    background-color:#fff3f5;
     font-family:'Poppins', sans-serif;
     text-align:center;
     margin:0;
     padding-top:80px;
+}
+.about{
+    background-color:white;
+    width:70%;
+    margin:40px auto;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(194, 67, 126, 0.1);
 }
 
 nav{
@@ -117,18 +125,29 @@ img{
 
 .about,
 .contact{
-    animation:fadeIn 1s ease;
-    background:white;
-    width:70%;
-    margin:40px auto;
-    padding:30px;
-    border-radius:20px;
-}
+    <div class="contact" id="contact">
 
-.about h2,
-.contact h2{
-    color:#d63384;
-    font-size:40px;
+<h2>Contact Me</h2>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<br><br>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<br><br>
+
+<textarea id="message" placeholder="Your Message" required></textarea>
+
+<br><br>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
 }
 
 .tips-container{
@@ -171,6 +190,15 @@ a{
 
 .contact textarea{
     height:120px;
+}
+.about h2{
+    color:#d63384;
+    font-size:40px;
+}
+
+.contact h2{
+    color:#d63384;
+    font-size:40px;
 }
 
 footer{
@@ -320,7 +348,11 @@ Hi, I'm Aiman. I share beauty, skincare, haircare, and fashion tips to help girl
 
 <br><br>
 
-<button>Send Message</button>
+<a id="whatsapp-link" target="_blank">
+
+<button>Send To WhatsApp</button>
+
+</a>
 
 </div>
 
@@ -335,6 +367,30 @@ Hi, I'm Aiman. I share beauty, skincare, haircare, and fashion tips to help girl
 <a href="https://linkedin.com">LinkedIn</a>
 
 </footer>
+<script>
+
+function sendToWhatsApp(){
+
+let name = document.querySelector('input[type="text"]').value;
+
+let email = document.querySelector('input[type="email"]').value;
+
+let message = document.querySelector('textarea').value;
+
+let phoneNumber = "923001234567";
+
+let url = "https://wa.me/" + phoneNumber + "?text="
++ "Name: " + name + "%0a"
++ "Email: " + email + "%0a"
++ "Message: " + message;
+
+document.getElementById("whatsapp-link").href = url;
+
+}
+
+document.querySelector("#whatsapp-link button").addEventListener("click", sendToWhatsApp);
+
+</script>
 
 </body>
 
