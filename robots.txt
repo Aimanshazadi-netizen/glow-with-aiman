@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://aimanshazadi-netizen.github.io/glow-with-aiman/sitemap.xml
